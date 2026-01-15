@@ -6,6 +6,7 @@ import com.beatgridmedia.assignment.movies.MovieService
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@CrossOrigin(origins = ["http://localhost:5173"])
 @RequestMapping("/api/movies")
 class MovieController(
     private val movieService: MovieService
