@@ -7,7 +7,7 @@ import jakarta.persistence.Table
 
 @Entity
 @Table(name = "MOVIE")
-data class Movie(
+class Movie(
     @Id
     val id: Long,
     val name: String,
@@ -26,4 +26,6 @@ data class Movie(
     val thumbnailUrl: String,
     val rating: Double,
     val duration: String
-)
+){
+    constructor() : this(0, "", "", 0, "", "", "", "", "", 0.0, "")
+}
