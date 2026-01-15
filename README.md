@@ -16,7 +16,7 @@
 
 **Pagination & Performance Optimization**
 
-    To efficiently handle larger datasets, pagination is implemented using Spring Data JPA’s Pageable abstraction.
+  - To efficiently handle larger datasets, pagination is implemented using Spring Data JPA’s Pageable abstraction.
 
 The search endpoint accepts page parameter, while I have the page size as 20.
   - Instead of loading the full MOVIE table into memory, the query fetches only the required subset of records.
