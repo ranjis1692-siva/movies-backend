@@ -8,10 +8,9 @@ import org.springframework.stereotype.Service
 class MovieService(
     private val movieRepository: MovieRepository
 ) {
-    fun autocomplete(query: String): List<Movie> {
+    fun searchByMovieName(query: String): List<Movie> {
         if (query.isBlank()) return emptyList()
-//        return movieRepository.searchMovies(query).take(10)
-        return movieRepository.findAll();
+        return movieRepository.searchMovies(query).take(10)
     }
     fun getMovieById(id: Long): Movie {
         return movieRepository.findById(id)

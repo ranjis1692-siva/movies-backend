@@ -12,7 +12,7 @@ class MovieController(
 ) {
     @GetMapping("/searchByText")
     fun search(@RequestParam query: String): List<Movie> {
-        return movieService.autocomplete(query)
+        return movieService.searchByMovieName(query)
     }
     @GetMapping("/{id}")
     fun getMovie(@PathVariable id: Long): Movie {
