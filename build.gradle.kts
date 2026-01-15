@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "3.5.8"
+    id("org.springframework.boot") version "3.3.4"
     id("io.spring.dependency-management") version "1.1.5"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.25"
 
@@ -30,6 +30,7 @@ dependencies {
     runtimeOnly("com.mysql:mysql-connector-j")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 tasks.withType<KotlinCompile> {
