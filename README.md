@@ -20,8 +20,10 @@
 
 The search endpoint accepts page parameter, while I have the page size as 20.
   - Instead of loading the full MOVIE table into memory, the query fetches only the required subset of records.
-  **- This reduces:
+  - This reduces:
       1. Full table scans
       2. Memory usage
-      3. Response time for large datasets**
+      3. Response time for large datasets
+   
+    
 Spring Data JPA translates the Pageable request into database-level LIMIT and OFFSET queries, ensuring that pagination is handled directly at the database layer rather than in application memory.
