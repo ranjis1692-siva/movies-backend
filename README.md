@@ -27,3 +27,8 @@ The search endpoint accepts page parameter, while I have the page size as 20.
    
     
 Spring Data JPA translates the Pageable request into database-level LIMIT and OFFSET queries, ensuring that pagination is handled directly at the database layer rather than in application memory.
+
+
+**CORS issue**
+After I created the endpoints and exposed them on to port 8080, I encountered the CORS error while trying to access from the 5173 PORT(frontend). So I added The @CrossOrigin(origins = ["http://localhost:5173"]) on the controller, which solved my issue. This again is very similar to Java with Springboot annotations.
+
